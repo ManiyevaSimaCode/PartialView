@@ -1,0 +1,231 @@
+﻿@model CardCategoryViewModel
+@{
+    ViewData["Title"] = "Home";
+
+}
+
+
+<!-- Start Banner Hero -->
+<partial name="_SliderPartialView" model=Model.Sliders></partial>
+<!-- End Banner Hero -->
+<!-- Start Service -->
+
+
+<section class="container py-5">
+        <div class="row justify-content-center my-5">
+            <div class="filter-btns shadow-md rounded-pill text-center col-auto">
+                <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4 active" data-filter=".project" href="#">All</a>
+                @foreach (Category category in Model.Categories)
+                {
+                    <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".@category.Name.ToLower()" href="#">@category.Name</a>
+                }
+            </div>
+            <div class="row projects gx-lg-5">
+                <partial name="_CardPartialView" model="Model.Cards"></partial>
+            </div>
+    </div>
+</section>
+<!-- End Service -->
+<!-- Start View Work -->
+<section class="bg-secondary">
+    <div class="container py-5">
+
+            <div class="col-lg-2 col-12 text-light align-items-center">
+                <i class='display-1 bx bxs-box bx-lg'></i>
+            </div>
+            <div class="col-lg-7 col-12 text-light pt-2">
+                <h3 class="h4 light-300">Great transformations successful</h3>
+                <p class="light-300">Quis ipsum suspendisse ultrices gravida.</p>
+            </div>
+            <div class="col-lg-3 col-12 pt-4">
+                <a href="#" class="btn btn-primary rounded-pill btn-block shadow px-4 py-2">View Our Work</a>
+            </div>
+
+    </div>
+</section>
+<!-- End View Work -->
+<!-- Start Recent Work -->
+<section class="py-5 mb-5">
+    <div class="container">
+        <div class="recent-work-header row text-center pb-5">
+            <h2 class="col-md-6 m-auto h2 semi-bold-600 py-5">Recent Works</h2>
+        </div>
+        <div class="row gy-5 g-lg-5 mb-4">
+
+            <!-- Start Recent Work -->
+            <div class="col-md-4 mb-3">
+                <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <img class="recent-work-img card-img" src="~/assets/img/recent-work-01.jpg" alt="Card image">
+                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                            <h3 class="card-title light-300">Social Media</h3>
+                            <p class="card-text">Ullamco laboris nisi ut aliquip ex</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+            <!-- Start Recent Work -->
+            <div class="col-md-4 mb-3">
+                <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <img class="recent-work-img card-img" src="~/assets/img/recent-work-02.jpg" alt="Card image">
+                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                            <h3 class="card-title light-300">Web Marketing</h3>
+                            <p class="card-text">Psum officia anim id est laborum.</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+            <!-- Start Recent Work -->
+            <div class="col-md-4 mb-3">
+                <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <img class="recent-work-img card-img" src="~/assets/img/recent-work-03.jpg" alt="Card image">
+                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                            <h3 class="card-title light-300">R & D</h3>
+                            <p class="card-text">Sum dolor sit consencutur</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+            <!-- Start Recent Work -->
+            <div class="col-md-4 mb-3">
+                <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <img class="recent-work-img card-img" src="~/assets/img/recent-work-04.jpg" alt="Card image">
+                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                            <h3 class="card-title light-300">Public Relation</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+            <!-- Start Recent Work -->
+            <div class="col-md-4 mb-3">
+                <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <img class="recent-work-img card-img" src="~/assets/img/recent-work-05.jpg" alt="Card image">
+                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                            <h3 class="card-title light-300">Branding</h3>
+                            <p class="card-text">Put enim ad minim veniam</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+            <!-- Start Recent Work -->
+            <div class="col-md-4 mb-3">
+                <a href="#" class="recent-work card border-0 shadow-lg overflow-hidden">
+                    <img class="recent-work-img card-img" src="~/assets/img/recent-work-06.jpg" alt="Card image">
+                    <div class="recent-work-vertical card-img-overlay d-flex align-items-end">
+                        <div class="recent-work-content text-start mb-3 ml-3 text-dark">
+                            <h3 class="card-title light-300">Creative Design</h3>
+                            <p class="card-text">Mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- End Recent Work -->
+
+        </div>
+    </div>
+</section>
+<!-- End Recent Work -->
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+                Launch demo modal
+            </button>
+            <div class="col-lg-12 grid-margin stretch-card">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Categories</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Category Id
+                                        </th>
+                                        <th>
+                                            Category Name
+                                        </th>
+                                        <th>
+                                            Operations
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach (var category in Model.Categories)
+                                    {
+                                        <tr>
+
+                                            <td>
+                                            </td>
+                                            <td>
+                                                @category.Name
+
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary btn-icon-text">
+                                                    <i class="ti-file btn-icon-prepend"></i>
+                                                    Details
+                                                </button>
+                                                <button type="button" class="btn btn-dark btn-icon-text">
+                                                    Edit
+                                                    <i class="ti-file btn-icon-append"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-success btn-icon-text">
+                                                    <i class="ti-alert btn-icon-prepend"></i>
+                                                    Remove
+                                                </button>
+
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add Category</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <form class="forms-sample">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder=" Category Name">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary btn-icon-text"> <i class="ti-file btn-icon-prepend"></i> Add</button>
+                                <button class="btn btn-light" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

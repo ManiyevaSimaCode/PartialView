@@ -1,0 +1,26 @@
+﻿@model List<Card>
+
+
+        @foreach(Card card in Model)
+        {
+              <a href="work-single.html" class="col-sm-6 col-lg-4 text-decoration-none project @card.Category.Name.ToLower()">
+            <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
+              
+                <img class="card-img-top" src="~/assets/img/@card.ImagePath" alt="...">
+                        
+                    
+                <div class="card-body">
+                    <h5 class="card-title light-300 text-dark">@card.Name</h5>
+                    <p class="card-text light-300 text-dark">
+                 @card.Description
+                    </p>
+                    <span class="text-decoration-none text-primary light-300" href="@card.Path"> 
+                        Read more <i class='bx bxs-hand-right ms-1'></i>
+                    </span>
+                </div>
+            </div>
+        </a> 
+        }
+
+     
+
